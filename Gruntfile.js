@@ -17,13 +17,13 @@ module.exports = function (grunt) {
 
     clean: {
       dist: 'dist',
-      docs: 'docs',
+      docs: ['docs/*.html', 'docs/css/*.css'],
       bower: 'bower_components',
       npm: 'node_modules'
     },
 
     jade: {
-      dist: {
+      docs: {
         options: {
           data: {
             debug: true,
@@ -31,48 +31,35 @@ module.exports = function (grunt) {
           }
         },
         files: [{
-          cwd: 'libs',
-          src: '**/*.jade',
-          dest: 'dist/components',
+          cwd: 'docs/assets/jade',
+          src: '*.jade',
+          dest: 'docs',
           expand: true,
           ext: '.html'
         }]
       }
     },
 
-    wiredep: {
-      options: {
-        dependencies: true,
-        devDependencies: true,
-        'overrides': {
-          'font-awesome': {
-            'main': [
-              'less/font-awesome.less',
-              'scss/font-awesome.scss',
-              'css/font-awesome.css'
-            ]
-          }
-        }
-      },
-      dist: {}
-    },
-
     sass: {
+      options: {
+        precision: 6,
+        sourcemap: 'auto',
+        style: 'expanded',
+        trace: true
+      },
       dist: {
-        options: {
-          precision: 6,
-          sourcemap: 'auto',
-          style: 'expanded',
-          trace: true
-        },
-
         files: [{
-          cwd: 'libs',
-          src: '**/*.{scss,sass}',
-          dest: 'dist/components',
+          cwd: 'src/scss',
+          src: '{,*/,*/*/,*/*/*/}*.{scss,sass}',
+          dest: 'dist/css',
           expand: true,
           ext: '.css'
         }]
+      },
+      docs: {
+        files: {
+          'docs/assets/css/docs.css': 'docs/assets/scss/docs.css.{scss,sass}'
+        }
       }
     },
 
@@ -82,18 +69,10 @@ module.exports = function (grunt) {
         map: true
       },
       dist: {
-        src: 'dist/components/**/*.css'
-      }
-    },
-
-    concat: {
-      js: {
-        src: 'dist/components/**/*.js',
-        dest: 'dist/js/<%= pkg.name %>.js'
+        src: 'dist/css/*.css'
       },
-      css: {
-        src: 'dist/components/**/*.css',
-        dest: 'dist/css/<%= pkg.name %>.css'
+      docs: {
+        src: 'docs/assets/css/*.css'
       }
     },
 
@@ -101,16 +80,31 @@ module.exports = function (grunt) {
       options: {
         sourcemap: true
       },
-
       dist: {
-        files: [{
-          expand: true,
-          cwd: 'dist/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'dist/css',
-          ext: '.min.css'
-        }]
+        files: {
+          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
+        }
       },
+      docs: {
+        files: {
+          'docs/assets/css/<%= pkg.name %>.min.css': 'docs/assets/css/<%= pkg.name %>.css'
+        }
+      }
+    },
+
+    concat: {
+      js: {
+        src: 'src/**/*.js',
+        dest: 'dist/js/<%= pkg.name %>.js'
+      }
+    },
+
+    uglify: {
+      dist: {
+        files: {
+          'dist/js/<%= pkg.name %>.min.js': 'dist/js/<%= pkg.name %>.js'
+        }
+      }
     },
 
     notify: {
@@ -161,14 +155,19 @@ module.exports = function (grunt) {
         }
       },
 
-      jade: {
-        files: '{,*/,*/*/,*/*/*/}*.jade',
+      docs: {
+        files: ['docs/{,*/,*/*/,*/*/*/}*.jade', 'docs/{,*/,*/*/,*/*/*/}*.{scss,sass}'],
         tasks: ['jade']
       },
 
       sass: {
-        files: '{,*/,*/*/,*/*/*/}*.{scss,sass}',
-        tasks: ['sass', 'autoprefixer', 'concat:css', 'cssmin']
+        files: 'src/{,*/,*/*/,*/*/*/}*.{scss,sass}',
+        tasks: ['sass:dist', 'autoprefixer', 'cssmin']
+      },
+
+      js: {
+        files: ['src/{,*/,*/*/,*/*/*/}*.js', '!Gruntfile.js'],
+        tasks: ['concat:js', 'uglify']
       }
     }
   });
