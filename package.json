@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andyhqtran/WaveUI.git"
+    "url": "git+https://github.com/andyhqtran/Wave.git"
   },
   "homepage": "http://waveui.io",
   "bugs": {
-    "url": "https://github.com/andyhqtran/Personal/issues"
+    "url": "https://github.com/andyhqtran/Wave/issues"
   },
   "author": {
     "name": "Andy Tran",
