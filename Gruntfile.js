@@ -30,9 +30,27 @@ module.exports = function (grunt) {
             pretty: true
           }
         },
+
         files: [{
-          cwd: 'docs/assets/jade',
+          cwd: 'docs',
           src: '*.jade',
+          dest: 'docs',
+          expand: true,
+          ext: '.html'
+        }]
+      }
+    },
+
+    htmlmin: {
+      docs: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+
+        files: [{
+          cwd: 'docs',
+          src: '*.html',
           dest: 'docs',
           expand: true,
           ext: '.html'
@@ -172,5 +190,6 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('docs', ['']);
   grunt.registerTask('default', ['connect:server', 'notify:server', 'watch']);
 };
