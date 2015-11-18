@@ -26,6 +26,11 @@ nbproject
 # Sass Cache
 .sass-cache
 
+# Files
+*.css
+*.map
+*.html
+
 # Folders
 bower_components
 node_modules
