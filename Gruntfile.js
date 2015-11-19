@@ -15,26 +15,18 @@ module.exports = function (grunt) {
       }
     },
 
-    clean: {
-      dist: 'dist',
-      docs: ['docs/*.html', 'docs/css/*.css'],
-      bower: 'bower_components',
-      npm: 'node_modules'
-    },
-
     jade: {
-      docs: {
+      dev: {
         options: {
           data: {
             debug: true,
             pretty: true
           }
         },
-
         files: [{
-          cwd: 'docs',
+          cwd: 'examples',
           src: '*.jade',
-          dest: 'docs',
+          dest: 'examples',
           expand: true,
           ext: '.html'
         }]
@@ -42,16 +34,15 @@ module.exports = function (grunt) {
     },
 
     htmlmin: {
-      docs: {
+      dev: {
         options: {
           removeComments: true,
           collapseWhitespace: true
         },
-
         files: [{
-          cwd: 'docs',
+          cwd: 'examples',
           src: '*.html',
-          dest: 'docs',
+          dest: 'examples',
           expand: true,
           ext: '.html'
         }]
@@ -59,13 +50,13 @@ module.exports = function (grunt) {
     },
 
     sass: {
-      options: {
-        precision: 6,
-        sourcemap: 'auto',
-        style: 'expanded',
-        trace: true
-      },
       dist: {
+        options: {
+          precision: 6,
+          sourcemap: false,
+          style: 'expanded',
+          trace: false
+        },
         files: [{
           cwd: 'src/scss',
           src: '{,*/,*/*/,*/*/*/}*.{scss,sass}',
@@ -74,36 +65,32 @@ module.exports = function (grunt) {
           ext: '.css'
         }]
       },
-      docs: {
-        files: {
-          'docs/assets/css/docs.css': 'docs/assets/scss/docs.css.{scss,sass}'
-        }
-      }
-    },
 
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions'],
-        map: true
-      },
-      dist: {
-        src: 'dist/css/*.css'
-      },
-      docs: {
-        src: 'docs/assets/css/*.css'
+      dev: {
+        options: {
+          sourcemap: 'auto',
+          style: 'expanded',
+          trace: true
+        },
+        files: {
+          'examples/style.css': 'examples/style.{scss,sass}'
+        }
       }
     },
 
     cssmin: {
-      options: {
-        sourcemap: true
-      },
       dist: {
+        options: {
+          sourcemap: false
+        },
         files: {
           'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
         }
       },
-      docs: {
+      dev: {
+        options: {
+          sourcemap: true
+        },
         files: {
           'docs/assets/css/<%= pkg.name %>.min.css': 'docs/assets/css/<%= pkg.name %>.css'
         }
@@ -173,23 +160,23 @@ module.exports = function (grunt) {
         }
       },
 
-      docs: {
-        files: ['docs/{,*/,*/*/,*/*/*/}*.jade', 'docs/{,*/,*/*/,*/*/*/}*.{scss,sass}'],
-        tasks: ['jade']
+      jade: {
+        files: ['**/*.jade'],
+        tasks: ['jade:dev']
       },
 
       sass: {
-        files: 'src/{,*/,*/*/,*/*/*/}*.{scss,sass}',
-        tasks: ['sass:dist', 'autoprefixer', 'cssmin']
+        files: '**/*.{scss,sass}',
+        tasks: ['sass:dev']
       },
 
       js: {
-        files: ['src/{,*/,*/*/,*/*/*/}*.js', '!Gruntfile.js'],
+        files: ['**/*.js', '!Gruntfile.js'],
         tasks: ['concat:js', 'uglify']
       }
     }
   });
 
-  grunt.registerTask('docs', ['']);
-  grunt.registerTask('default', ['connect:server', 'notify:server', 'watch']);
+  grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev']);
+  grunt.registerTask('default', ['connect:server', 'dev', 'notify:server', 'watch']);
 };
