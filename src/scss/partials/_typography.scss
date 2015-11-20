@@ -62,11 +62,13 @@ ol {
 }
 
 .list {
+  // Unstyled List
   &-unstyled {
     list-style: none;
     padding: ($gutters / 2) 0 $gutters;
   }
 
+  // Inline List
   &-inline {
     list-style: none;
     padding: ($gutters / 2) 0;
