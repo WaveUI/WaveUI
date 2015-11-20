@@ -23,11 +23,7 @@ $accent: #1ABFFF;
 $secondary: #FFB90C;
 
 // Brand Colors
-$brand-primary: $accent;
-$brand-info: #31D0EB;
-$brand-success: #56D162;
-$brand-warning: $secondary;
-$brand-danger: #D16256;
+$brand-color: (default: #E2E2E2, primary: $accent, info: #31D0EB, success: #56D162, warning: $secondary, danger: #D16256);
 
 // Base Settings
 $base-background: darken($white, 5%);
@@ -37,11 +33,11 @@ $base-font-size: 14px;
 $base-font-weight: $regular;
 $base-line-height: em(20);
 
-// Heading
+// Heading Settings
 $heading-color: $dark-gray;
 $heading-sizes: (h1: em(60), h2: em(48), h3: em(36), h4: em(24), h5: em(18), h6: em(16));
 
-// Grid
+// Grid Settings
 $container-max-width: 1280px;
 $container-width: 90%;
 $container-fluid-max-width: 100%;
@@ -49,13 +45,28 @@ $container-fluid-width: 100%;
 $columns: 12;
 $gutters: 20px;
 
-// Flex Grid
+// Flex Grid Settings
 $align-content: flex-start, flex-end, center, space-between, space-around, stretch;
 $align-items: flex-start, flex-end, center, baseline, stretch;
 $align-self: auto, flex-start, flex-end, center, baseline, stretch;
 $flex-direction: row, row-reserve, column, column-reverse;
 $flex-wrap: nowrap, wrap, wrap-reverse;
 $justify-content: flex-start, flex-end, center, space-between, space-around;
+
+// Components Settings
+$components-padding: (vertical: 10px, horizontal: 20px);
+$components-border-radius: 2px;
+
+// Button Settings
+$btn-border-radius: $components-border-radius;
+$btn-font-weight: $bold;
+
+$btn-default: (color: $gray, bg: map-get($brand-color, default), border: null);
+$btn-primary: (color: $white, bg: map-get($brand-color, primary), border: null);
+$btn-info: (color: $white, bg: map-get($brand-color, info), border: null);
+$btn-success: (color: $white, bg: map-get($brand-color, success), border: null);
+$btn-warning: (color: $white, bg: map-get($brand-color, warning), border: null);
+$btn-danger: (color: $white, bg: map-get($brand-color, danger), border: null);
 
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);
