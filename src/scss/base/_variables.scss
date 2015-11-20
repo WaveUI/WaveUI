@@ -40,8 +40,18 @@ $base-line-height: em(20);
 // Grid
 $container-max-width: 1280px;
 $container-width: 90%;
+$container-fluid-max-width: 100%;
+$container-fluid-width: 100%;
 $columns: 12;
 $gutters: 20px;
+
+// Flex Grid
+$align-content: flex-start, flex-end, center, space-between, space-around, stretch;
+$align-items: flex-start, flex-end, center, baseline, stretch;
+$align-self: auto, flex-start, flex-end, center, baseline, stretch;
+$flex-direction: row, row-reserve, column, column-reverse;
+$flex-wrap: nowrap, wrap, wrap-reverse;
+$justify-content: flex-start, flex-end, center, space-between, space-around;
 
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);
