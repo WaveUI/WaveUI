@@ -1,6 +1,6 @@
 // Fonts
 $body-font: "Roboto";
-$header-font: "Roboto";
+$heading-font: "Roboto";
 
 // Font Weight
 $ultra: 800;
@@ -59,7 +59,7 @@ $components-border-radius: 2px;
 
 // Button Settings
 $btn-border-radius: $components-border-radius;
-$btn-font-weight: $bold;
+$btn-font-weight: $semibold;
 
 $btn-default: (color: $gray, bg: map-get($brand-color, default), border: null);
 $btn-primary: (color: $white, bg: map-get($brand-color, primary), border: null);

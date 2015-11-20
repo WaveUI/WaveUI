@@ -14,7 +14,19 @@
 @import "base/mixins";
 
 /* Body */
-body {}
+body {
+  background: $base-background;
+  color: $base-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset */
+@import "partials/reset";
 
 /* Typography */
 @import "partials/typography";
