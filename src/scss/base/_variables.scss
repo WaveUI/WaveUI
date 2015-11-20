@@ -1,0 +1,47 @@
+// Fonts
+$body-font: "Roboto";
+$header-font: "Roboto";
+
+// Font Weight
+$ultra: 800;
+$bold: 700;
+$semibold: 500;
+$regular: 400;
+$light: 300;
+$thin: 100;
+
+// Base Colors
+$black: #000000;
+$white: #FFFFFF;
+
+$dark-gray: lighten($black, 20%);
+$gray: lighten($black, 40%);
+$light-gray: lighten($black, 60%);
+
+// Theme Colors
+$accent: #1ABFFF;
+$secondary: #FFB90C;
+
+// Brand Colors
+$brand-primary: $accent;
+$brand-info: #31D0EB;
+$brand-success: #56D162;
+$brand-warning: $secondary;
+$brand-danger: #D16256;
+
+// Base Settings
+$base-background: darken($white, 5%);
+$base-color: $gray;
+$base-font-family: $body-font, Helvetica, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: $regular;
+$base-line-height: em(20);
+
+// Grid
+$container-max-width: 1280px;
+$container-width: 90%;
+$columns: 12;
+$gutters: 20px;
+
+// Media Queries
+$media-query: (desktop: 1024px, tablet: 768px, phone: 480px);
