@@ -40,20 +40,46 @@ ol {
 
 ul,
 ol {
-  padding: 0 0 $gutters $gutters;
+  padding: ($gutters / 2) 0 $gutters $gutters;
   margin: 0;
 
   li {
     padding: ($gutters / 2) 0;
+
+    &:last-of-type {
+      padding: ($gutters / 2) 0 0;
+    }
+
+    &.active {
+      color: $accent;
+    }
   }
 
   ul,
   ol {
-    margin: 0;
+    padding: ($gutters / 2) 0 0 $gutters;
   }
 }
 
-.list-unstyled {
-  padding: 0;
-  list-style: none;
+.list {
+  &-unstyled {
+    list-style: none;
+    padding: ($gutters / 2) 0 $gutters;
+  }
+
+  &-inline {
+    list-style: none;
+    padding: ($gutters / 2) 0;
+
+    > li {
+      display: inline-block;
+      margin: 0 0 0 (-$gutters / 2);
+      padding: 0 ($gutters / 2);
+
+      &:last-of-type {
+        margin: 0 0 0 (-$gutters / 2);
+        padding: 0 ($gutters / 2);
+      }
+    }
+  }
 }
