@@ -15,8 +15,32 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Anchor */
+a {
+  color: $dark-gray;
+  text-decoration: none;
+}
+
+/* Bold */
+b,
+strong {
+  font-weight: $semibold;
+}
+
+/* Italic */
+i,
+em {
+  font-size: italic;
+}
+
+/* Underline */
+u {
+  text-decoration: underline;
+}
+
 /* Paragraph */
 p {
+  color: inherit;
   margin: 0 0 ($gutters / 2);
 
   &:only-of-type,
@@ -84,4 +108,18 @@ ol {
       }
     }
   }
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 2px solid $accent;
+  margin: $gutters 0;
+  padding: 0 0 0 $gutters;
+}
+
+/* Clear */
+.clear {
+  content: '';
+  display: block;
+  clear: both;
 }

@@ -1,0 +1,18 @@
+.btn {
+  outline: 0;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: map-get($components-padding, vertical) map-get($components-padding, horizontal);
+  color: $dark-gray;
+  font-size: 14px;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  vertical-align: middle;
+  touch-action: manipulation;
+  transition: 0.3s ease;
+}
