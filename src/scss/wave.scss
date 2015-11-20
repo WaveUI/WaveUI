@@ -13,6 +13,9 @@
 // Mixins
 @import "base/mixins";
 
+// Mixins
+@import "vendors/normalize";
+
 /* Body */
 body {
   background: $base-background;
