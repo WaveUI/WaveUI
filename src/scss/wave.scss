@@ -1,4 +1,14 @@
-body {
-  display: flex;
-  background: #000;
-}
+/*!
+ * Wave v0.0.1 (http://waveui.io)
+ * Copyright 2015 Andy Tran (http://andytran.me)
+ * Licensed under MIT (https://github.com/WaveUI/blob/master/LICENSE)
+ */
+
+// Variables
+@import "base/variables";
+
+// Mixins
+@import "base/mixins";
+
+/* Body */
+body {}

@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andyhqtran/Wave.git"
+    "url": "git+https://github.com/WaveUI/Wave.git"
   },
   "homepage": "http://waveui.io",
   "bugs": {
-    "url": "https://github.com/andyhqtran/Wave/issues"
+    "url": "https://github.com/WaveUI/Wave/issues"
   },
   "author": {
     "name": "Andy Tran",
@@ -50,6 +50,7 @@
     "grunt-csscomb": "^3.1.0",
     "grunt-notify": "^0.4.1",
     "grunt-postcss": "^0.7.1",
+    "grunt-wiredep": "^2.0.0",
     "load-grunt-tasks": "^3.2.0"
   }
 }
