@@ -190,7 +190,7 @@ module.exports = function (grunt) {
 
       jade: {
         files: ['**/*.jade'],
-        tasks: ['jade:dev']
+        tasks: ['jade:dev', 'wiredep:dev']
       },
 
       sass: {
