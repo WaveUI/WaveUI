@@ -31,6 +31,33 @@ module.exports = function (grunt) {
       }
     },
 
+    // Wiredep
+    wiredep: {
+      dev: {
+        options: {
+          dependencies: true,
+          devDependencies: true,
+          'overrides': {
+            'waypoints': {
+              'main': [
+                "lib/jquery.waypoints.min.js"
+              ]
+            },
+            'font-awesome': {
+              'main': [
+                'less/font-awesome.less',
+                'scss/font-awesome.scss',
+                'css/font-awesome.css'
+              ]
+            }
+          }
+        },
+        src: [
+          '**/*.jade'
+        ],
+      }
+    },
+
     // HTMLmin
     htmlmin: {
       dev: {
