@@ -68,5 +68,16 @@ $btn-success: (color: $white, bg: map-get($brand-color, success), border: null);
 $btn-warning: (color: $white, bg: map-get($brand-color, warning), border: null);
 $btn-danger: (color: $white, bg: map-get($brand-color, danger), border: null);
 
+// Button Settings
+$alert-border-radius: $components-border-radius;
+$alert-font-weight: $regular;
+
+$alert-default: (color: $gray, bg: map-get($brand-color, default), border: null);
+$alert-primary: (color: $white, bg: map-get($brand-color, primary), border: null);
+$alert-info: (color: $white, bg: map-get($brand-color, info), border: null);
+$alert-success: (color: $white, bg: map-get($brand-color, success), border: null);
+$alert-warning: (color: $white, bg: map-get($brand-color, warning), border: null);
+$alert-danger: (color: $white, bg: map-get($brand-color, danger), border: null);
+
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);
