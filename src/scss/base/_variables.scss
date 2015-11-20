@@ -37,6 +37,10 @@ $base-font-size: 14px;
 $base-font-weight: $regular;
 $base-line-height: em(20);
 
+// Heading
+$heading-color: $dark-gray;
+$heading-sizes: (h1: em(60), h2: em(48), h3: em(36), h4: em(24), h5: em(18), h6: em(16));
+
 // Grid
 $container-max-width: 1280px;
 $container-width: 90%;

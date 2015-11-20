@@ -1,0 +1,6 @@
+/* Heading */
+@each $element, $size in $heading-sizes {
+  #{$element} {
+    font-size: $size;
+  }
+}
