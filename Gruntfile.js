@@ -6,6 +6,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    // Connect
     connect: {
       server: {
         options: {
@@ -15,6 +16,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Jade
     jade: {
       dev: {
         options: {
@@ -23,61 +25,55 @@ module.exports = function (grunt) {
             pretty: true
           }
         },
-        files: [{
-          cwd: 'examples',
-          src: '*.jade',
-          dest: 'examples',
-          expand: true,
-          ext: '.html'
-        }]
+        files: {
+          'examples/index.html': 'examples/index.jade'
+        }
       }
     },
 
+    // HTMLmin
     htmlmin: {
       dev: {
         options: {
           removeComments: true,
           collapseWhitespace: true
         },
-        files: [{
-          cwd: 'examples',
-          src: '*.html',
-          dest: 'examples',
-          expand: true,
-          ext: '.html'
-        }]
+        files: {
+          'examples/index.html': 'examples/index.html'
+        }
       }
     },
 
+    // Sass
     sass: {
+      options: {
+        precision: 6,
+        style: 'expanded'
+      },
+
       dist: {
         options: {
-          precision: 6,
           sourcemap: false,
-          style: 'expanded',
           trace: false
         },
-        files: [{
-          cwd: 'src/scss',
-          src: '{,*/,*/*/,*/*/*/}*.{scss,sass}',
-          dest: 'dist/css',
-          expand: true,
-          ext: '.css'
-        }]
+        files: {
+          'dist/css/wave.css': 'src/scss/wave.{scss,sass}'
+        }
       },
 
       dev: {
         options: {
           sourcemap: 'auto',
-          style: 'expanded',
           trace: true
         },
         files: {
+          'dist/css/wave.css': 'src/scss/wave.{scss,sass}',
           'examples/style.css': 'examples/style.{scss,sass}'
         }
       }
     },
 
+    // CSSmin
     cssmin: {
       dist: {
         options: {
@@ -87,6 +83,7 @@ module.exports = function (grunt) {
           'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css'
         }
       },
+
       dev: {
         options: {
           sourcemap: true
@@ -97,6 +94,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Concat
     concat: {
       js: {
         src: 'src/**/*.js',
@@ -104,6 +102,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Uglify
     uglify: {
       dist: {
         files: {
@@ -112,6 +111,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Notify
     notify: {
       options: {
         title: 'Grunt'
@@ -142,6 +142,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Watch
     watch: {
       options: {
         livereload: true,
