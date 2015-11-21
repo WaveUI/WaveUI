@@ -1,0 +1,27 @@
+.badge,
+.label {
+  display: inline-block;
+  border-radius: $label-border-radius;
+  padding: $label-padding;
+  line-height: 1;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+
+  @each $name, $color in $brand-colors {
+    @if $name != "default" {
+      &-#{$name} {
+        background: color($name);
+        color: $white;
+      }
+    }
+
+    @else {
+      background: color($name);
+      color: $dark-gray;
+    }
+  }
+}
+
+.badge {
+  border-radius: $badge-border-radius;
+}

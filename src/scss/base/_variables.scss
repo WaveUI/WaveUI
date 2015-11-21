@@ -60,6 +60,13 @@ $justify-content: flex-start, flex-end, center, space-between, space-around;
 $components-padding: 20px;
 $components-border-radius: 2px;
 
+// Labels & Badges
+$label-border-radius: $components-border-radius;
+$label-padding: 4px 7px;
+$label-font-size: 12px;
+$label-font-weight: $semibold;
+$badge-border-radius: 100px;
+
 // Button Settings
 $btn-border-radius: $components-border-radius;
 $btn-padding: 10px 20px;
