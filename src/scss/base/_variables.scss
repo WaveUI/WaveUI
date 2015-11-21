@@ -70,5 +70,11 @@ $alert-border-radius: $components-border-radius;
 $alert-padding: $components-padding;
 $alert-font-weight: $regular;
 
+// Progress Bar Settings
+$progress-background: color(default);
+$progress-bar-padding: 2px 4px;
+$progress-bar-font-size: 12px;
+$progress-bar-text-align: center;
+
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);

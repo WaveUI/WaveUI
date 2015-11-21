@@ -35,7 +35,31 @@ html
         margin: 10px;
       }
 
+      .progress {
+      margin:  20px 0;
+      }
+
   body
+
+    .progress
+      .progress-bar(style='width: 60%'
+                    animated='true')
+        span 60%
+    .progress
+      .progress-bar.progress-bar-primary(style='width: 60%')
+        span 60%
+    .progress
+      .progress-bar.progress-bar-primary(style='width: 1%')
+        span 1%
+
+    .progress
+      .progress-bar.progress-bar-primary(style='width: 60%')
+
+    .progress
+      .progress-bar.progress-bar-primary(style='width: 1%')
+
+    .progress
+      .progress-bar(style='width: 60%')
 
     div(class='alert')
       b Warning!

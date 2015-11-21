@@ -1,0 +1,39 @@
+.progress {
+  background: $progress-background;
+
+  &-bar {
+    padding: $progress-bar-padding;
+    line-height: normal;
+    text-align: $progress-bar-text-align;
+
+    &[animated],
+    &[animated='true'] {
+      animation: progress-slide 1s ease;
+    }
+
+    @each $name, $color in $brand-colors {
+      @if $name != "default" {
+        &-#{$name} {
+          background: color($name);
+          color: $white;
+        }
+      }
+
+      @else {
+        background: rgba($black, 0.1);
+        color: $dark-gray;
+      }
+    }
+
+    span {
+      font-size: $progress-bar-font-size;
+      font-weight: $semibold;
+    }
+  }
+}
+
+@keyframes progress-slide {
+  0% {
+    width: 0%;
+  }
+}
