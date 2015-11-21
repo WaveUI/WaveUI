@@ -16,6 +16,15 @@
   touch-action: manipulation;
   transition: 0.3s ease;
 
+  &[elevated='true'] {
+    @include elevation(1);
+
+    &:hover,
+    &:focus {
+      @include elevation(3);
+    }
+  }
+
   &-link {
     color: $accent;
   }
@@ -26,7 +35,8 @@
         background: color($name);
         color: $white;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background: darken(color($name), 10%);
         }
       }
@@ -37,7 +47,8 @@
         background: color($name);
         color: $dark-gray;
 
-        &:hover {
+        &:hover,
+        &:focus {
           background: darken(color($name), 10%);
         }
       }

@@ -33,6 +33,9 @@ $base-font-size: 14px;
 $base-font-weight: $regular;
 $base-line-height: em(24);
 
+// Elevation Levels
+$elevation-levels: 5;
+
 // Heading Settings
 $heading-color: $dark-gray;
 $heading-sizes: (h1: em(60), h2: em(48), h3: em(36), h4: em(24), h5: em(18), h6: em(16));
