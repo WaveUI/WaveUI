@@ -166,6 +166,12 @@ module.exports = function (grunt) {
         options: {
           message: 'Sass files has been compiled.'
         }
+      },
+
+      js: {
+        options: {
+          message: 'JavaScript files have been concatenated and minified.'
+        }
       }
     },
 
@@ -190,17 +196,17 @@ module.exports = function (grunt) {
 
       jade: {
         files: ['**/*.jade'],
-        tasks: ['jade:dev', 'wiredep:dev']
+        tasks: ['jade:dev', 'wiredep:dev', 'notify:jade']
       },
 
       sass: {
         files: '**/*.{scss,sass}',
-        tasks: ['sass:dev']
+        tasks: ['sass:dev', 'notify:sass']
       },
 
       js: {
         files: ['**/*.js', '!Gruntfile.js'],
-        tasks: ['concat:js', 'uglify']
+        tasks: ['concat:js', 'uglify', 'notify:js']
       }
     }
   });
