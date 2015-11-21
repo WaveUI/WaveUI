@@ -23,7 +23,7 @@ $accent: #1ABFFF;
 $secondary: #FFB90C;
 
 // Brand Colors
-$brand-color: (default: #E2E2E2, primary: $accent, info: #31D0EB, success: #56D162, warning: $secondary, danger: #D16256);
+$brand-colors: (default: #E2E2E2, primary: $accent, info: #31D0EB, success: #56D162, warning: $secondary, danger: #D16256);
 
 // Base Settings
 $base-background: darken($white, 5%);
@@ -61,23 +61,9 @@ $components-border-radius: 2px;
 $btn-border-radius: $components-border-radius;
 $btn-font-weight: $semibold;
 
-$btn-default: (color: $gray, bg: map-get($brand-color, default), border: null);
-$btn-primary: (color: $white, bg: map-get($brand-color, primary), border: null);
-$btn-info: (color: $white, bg: map-get($brand-color, info), border: null);
-$btn-success: (color: $white, bg: map-get($brand-color, success), border: null);
-$btn-warning: (color: $white, bg: map-get($brand-color, warning), border: null);
-$btn-danger: (color: $white, bg: map-get($brand-color, danger), border: null);
-
-// Button Settings
+// Alert Settings
 $alert-border-radius: $components-border-radius;
 $alert-font-weight: $regular;
-
-$alert-default: (color: $gray, bg: map-get($brand-color, default), border: null);
-$alert-primary: (color: $white, bg: map-get($brand-color, primary), border: null);
-$alert-info: (color: $white, bg: map-get($brand-color, info), border: null);
-$alert-success: (color: $white, bg: map-get($brand-color, success), border: null);
-$alert-warning: (color: $white, bg: map-get($brand-color, warning), border: null);
-$alert-danger: (color: $white, bg: map-get($brand-color, danger), border: null);
 
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);

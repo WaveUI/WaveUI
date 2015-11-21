@@ -12,3 +12,21 @@ $browser-context: 16; // Default
 
   @return $pixels / $context * 1em;
 }
+
+// Color
+@function color($key) {
+  @if not map-has-key($brand-colors, $key) {
+    @warn "Key `#{$key}` not found.";
+  }
+
+  @return map-get($brand-colors, $key);
+}
+
+// Button
+@function button($type, $key) {
+  @if not map-has-key($colors, $key) {
+    @warn "Key `#{$key}` not found.";
+  }
+
+  @return map-get($type, $key);
+}

@@ -3,7 +3,7 @@
   display: inline-block;
   background: transparent;
   border: 0;
-  border-radius: 3px;
+  border-radius: $components-border-radius;
   box-sizing: border-box;
   padding: map-get($components-padding, vertical) map-get($components-padding, horizontal);
   color: $dark-gray;
@@ -15,4 +15,47 @@
   vertical-align: middle;
   touch-action: manipulation;
   transition: 0.3s ease;
+
+  &-link {
+    color: $accent;
+  }
+
+  @each $name, $color in $brand-colors {
+    @if $name != "default" {
+      &-#{$name} {
+        background: color($name);
+        color: $white;
+
+        &:hover {
+          background: darken(color($name), 10%);
+        }
+      }
+    }
+
+    @else {
+      &-#{$name} {
+        background: color($name);
+        color: $dark-gray;
+
+        &:hover {
+          background: darken(color($name), 10%);
+        }
+      }
+    }
+  }
+
+  &[disabled],
+  &[disabled='true'] {
+    background: lighten($black, 80%);
+    cursor: not-allowed;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+
+    & + & {
+      margin: ($gutters / 2) 0 0;
+    }
+  }
 }
