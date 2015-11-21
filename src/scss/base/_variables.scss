@@ -57,15 +57,17 @@ $flex-wrap: nowrap, wrap, wrap-reverse;
 $justify-content: flex-start, flex-end, center, space-between, space-around;
 
 // Components Settings
-$components-padding: (vertical: 10px, horizontal: 20px);
+$components-padding: 20px;
 $components-border-radius: 2px;
 
 // Button Settings
 $btn-border-radius: $components-border-radius;
+$btn-padding: 10px 20px;
 $btn-font-weight: $semibold;
 
 // Alert Settings
 $alert-border-radius: $components-border-radius;
+$alert-padding: $components-padding;
 $alert-font-weight: $regular;
 
 // Media Queries

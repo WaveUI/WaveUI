@@ -3,9 +3,9 @@
   display: inline-block;
   background: transparent;
   border: 0;
-  border-radius: $components-border-radius;
+  border-radius: $btn-border-radius;
+  padding: 10px 20px;
   box-sizing: border-box;
-  padding: map-get($components-padding, vertical) map-get($components-padding, horizontal);
   color: $dark-gray;
   font-size: 14px;
   font-weight: $btn-font-weight;

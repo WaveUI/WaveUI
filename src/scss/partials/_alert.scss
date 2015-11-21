@@ -1,0 +1,20 @@
+.alert {
+  border-radius: $alert-border-radius;
+  margin: 0 0 $gutters;
+  padding: $alert-padding;
+  box-sizing: border-box;
+
+  @each $name, $color in $brand-colors {
+    @if $name != "default" {
+      &-#{$name} {
+        background: color($name);
+        color: $white;
+      }
+    }
+
+    @else {
+      background: color($name);
+      color: $dark-gray;
+    }
+  }
+}
