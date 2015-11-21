@@ -32,5 +32,6 @@ nbproject
 *.html
 
 # Folders
+dist
 bower_components
 node_modules
