@@ -83,5 +83,15 @@ $progress-bar-padding: 2px 4px;
 $progress-bar-font-size: 12px;
 $progress-bar-text-align: center;
 
+// Card Settings
+$card-background: $white;
+$card-border-radius: $components-border-radius;
+$card-header-padding: 20px;
+$card-header-font-size: 18px;
+$card-header-font-weight: $semibold;
+$card-body-padding: 20px;
+$card-footer-padding: 4px;
+$card-footer-font-weight: $semibold;
+
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);

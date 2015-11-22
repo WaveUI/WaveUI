@@ -1,0 +1,44 @@
+.card {
+  background: $card-background;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+
+  @each $name, $color in $brand-colors {
+    @if $name != "default" {
+      &-#{$name} {
+
+        .card-header,
+        .card-footer {
+          background: color($name);
+          color: $white;
+        }
+      }
+    }
+
+    @else {
+      .card-header {
+        background: color($name);
+        color: $dark-gray;
+      }
+    }
+  }
+
+  &-header {
+    padding: $card-header-padding;
+    font-size: $card-header-font-size;
+    font-weight: $card-header-font-weight;
+  }
+
+  &-body {
+    padding: $card-body-padding;
+  }
+
+  &-footer {
+    padding: $card-footer-padding;
+    font-weight: $card-footer-font-weight;
+
+    .btn-link {
+      color: $white;
+    }
+  }
+}
