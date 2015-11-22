@@ -198,7 +198,7 @@ module.exports = function (grunt) {
 
       configFiles: {
         files: ['Gruntfile.js'],
-        tasks: ['notify:grunt'],
+        tasks: ['notify:grunt', 'wakeup:complete'],
         options: {
           reload: true
         }
