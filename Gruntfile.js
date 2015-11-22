@@ -175,6 +175,16 @@ module.exports = function (grunt) {
       }
     },
 
+    // Wake Up
+    wakeup: {
+      complete: {
+        options: {
+          custom: '.grunt/pop.mp3',
+          volume: 1
+        }
+      },
+    },
+
     // Watch
     watch: {
       options: {
@@ -196,17 +206,17 @@ module.exports = function (grunt) {
 
       jade: {
         files: ['**/*.jade'],
-        tasks: ['jade:dev', 'wiredep:dev', 'notify:jade']
+        tasks: ['jade:dev', 'wiredep:dev', 'notify:jade', 'wakeup:complete']
       },
 
       sass: {
         files: '**/*.{scss,sass}',
-        tasks: ['sass:dev', 'notify:sass']
+        tasks: ['sass:dev', 'notify:sass', 'wakeup:complete']
       },
 
       js: {
         files: ['**/*.js', '!Gruntfile.js'],
-        tasks: ['concat:js', 'uglify', 'notify:js']
+        tasks: ['concat:js', 'uglify', 'notify:js', 'wakeup:complete']
       }
     }
   });
