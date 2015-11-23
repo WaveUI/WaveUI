@@ -1,5 +1,7 @@
 .progress {
   background: $progress-background;
+  border-radius: $progress-border-radius;
+  overflow: hidden;
 
   &-bar {
     padding: $progress-bar-padding;
