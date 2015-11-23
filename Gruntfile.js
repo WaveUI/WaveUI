@@ -121,6 +121,18 @@ module.exports = function (grunt) {
       }
     },
 
+    // CSSComb
+    csscomb: {
+      dist: {
+        options: {
+          config: 'src/scss/.csscomb.json'
+        },
+        files: {
+          'dist/css/<%= pkg.name %>.css': ['dist/css/<%= pkg.name %>.css'],
+        }
+      }
+    },
+
     // Concat
     concat: {
       js: {
