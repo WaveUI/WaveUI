@@ -33,6 +33,7 @@ html
     style.
       .card,
       .btn,
+      .btn-group,
       .input-group,
       .alert,
       .label,
@@ -41,6 +42,7 @@ html
         margin:  20px;
       }
 
+      .btn-group .btn,
       .card .btn {
         margin: 0;
       }
@@ -50,6 +52,30 @@ html
       }
 
   body
+
+    .btn-group
+      button(class='btn btn-primary'
+             type='button'
+             ripple=''
+             ripple-color='#000') Button
+      button(class='btn btn-primary'
+             type='button'
+             ripple=''
+             ripple-color='#000') Button
+
+    .btn-group
+      button(class='btn btn-primary'
+             type='button'
+             ripple=''
+             ripple-color='#000') Button
+      button(class='btn btn-primary'
+             type='button'
+             ripple=''
+             ripple-color='#000') Button
+      button(class='btn btn-primary'
+             type='button'
+             ripple=''
+             ripple-color='#000') Button
 
     .input-group
       input.input(type='text'

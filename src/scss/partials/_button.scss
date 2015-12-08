@@ -69,4 +69,21 @@
       margin: ($gutters / 2) 0 0;
     }
   }
+
+  &-group {
+    display: inline-flex;
+
+    .btn {
+      margin: 0;
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: $btn-border-radius 0 0 $btn-border-radius;
+      }
+
+      &:last-child {
+        border-radius: 0 $btn-border-radius $btn-border-radius 0;
+      }
+    }
+  }
 }
