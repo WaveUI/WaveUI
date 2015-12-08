@@ -38,6 +38,11 @@
         }
       }
     }
+
+    &[disabled],
+    &[disabled='true'] {
+      cursor: not-allowed;
+    }
   }
 
   &-label {
