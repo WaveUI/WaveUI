@@ -33,6 +33,7 @@ html
     style.
       .card,
       .btn,
+      .input-group,
       .alert,
       .label,
       .badge,
@@ -44,7 +45,23 @@ html
         margin: 0;
       }
 
+      .input-group {
+        max-width: 300px;
+      }
+
   body
+
+    .input-group
+      input.input(type='text'
+                  required)
+      label.input-group-label Input Field
+      span.input-group-border
+
+    .input-group.input-group-success
+      input.input(type='text'
+                  required)
+      label.input-group-label Input Field
+      span.input-group-border
 
     .card.card-primary
       .card-body Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.

@@ -77,6 +77,14 @@ $btn-border-radius: $components-border-radius;
 $btn-padding: 10px 20px;
 $btn-font-weight: $semibold;
 
+// Input Settings
+$input-border-color: map-get($brand-colors, default);
+$input-border-height: 2px;
+$input-border-radius: $components-border-radius;
+$input-padding-vertical: $components-padding / 2;
+$input-padding-horizontal: $components-padding;
+$input-font-weight: $semibold;
+
 // Alert Settings
 $alert-border-radius: $components-border-radius;
 $alert-padding: $components-padding;
