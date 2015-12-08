@@ -4,9 +4,9 @@
   overflow: hidden;
 
   &-bar {
+    box-sizing: border-box;
     padding: $progress-bar-padding;
     line-height: normal;
-    text-align: $progress-bar-text-align;
 
     &[animated],
     &[animated='true'] {

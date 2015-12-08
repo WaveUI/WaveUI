@@ -53,6 +53,27 @@ p {
   }
 }
 
+/* Font Style */
+@each $value in $font-style {
+  [font-style='#{$value}'] {
+    font-style: $value;
+  }
+}
+
+/* Text Alignment */
+@each $value in $text-align {
+  [text-align='#{$value}'] {
+    text-align: $value;
+  }
+}
+
+/* Text Transform */
+@each $value in $text-transform {
+  [text-transform='#{$value}'] {
+    text-transform: $value;
+  }
+}
+
 /* List */
 ul {
   list-style: disc;
@@ -64,8 +85,8 @@ ol {
 
 ul,
 ol {
-  padding: ($gutters / 2) 0 $gutters $gutters;
   margin: 0;
+  padding: ($gutters / 2) 0 $gutters $gutters;
 
   li {
     padding: ($gutters / 2) 0;

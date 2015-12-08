@@ -29,7 +29,7 @@ $brand-colors: (default: #E2E2E2, primary: $accent, info: #31D0EB, success: #56D
 $base-background: darken($white, 5%);
 $base-color: $gray;
 $base-font-family: $body-font, Helvetica, sans-serif;
-$base-font-size: 14px;
+$base-font-size: em(14);
 $base-font-weight: $regular;
 $base-line-height: em(24);
 
@@ -56,6 +56,11 @@ $flex-direction: row, row-reserve, column, column-reverse;
 $flex-wrap: nowrap, wrap, wrap-reverse;
 $justify-content: flex-start, flex-end, center, space-between, space-around;
 
+// Text Settings
+$font-style: normal, italic, oblique, initial, inherit;
+$text-align: right, center, left, justify, initial, inherit;
+$text-transform: none, capitalize, uppercase, lowercase, initial, inherit;
+
 // Components Settings
 $components-padding: 20px;
 $components-border-radius: 2px;
@@ -63,7 +68,7 @@ $components-border-radius: 2px;
 // Labels & Badges
 $label-border-radius: $components-border-radius;
 $label-padding: 4px 7px;
-$label-font-size: 12px;
+$label-font-size: em(12);
 $label-font-weight: $semibold;
 $badge-border-radius: 100px;
 
@@ -80,15 +85,14 @@ $alert-font-weight: $regular;
 // Progress Bar Settings
 $progress-background: color(default);
 $progress-border-radius: $components-border-radius;
-$progress-bar-padding: 2px 4px;
-$progress-bar-font-size: 12px;
-$progress-bar-text-align: center;
+$progress-bar-padding: 2px 8px;
+$progress-bar-font-size: em(12);
 
 // Card Settings
 $card-background: $white;
 $card-border-radius: $components-border-radius;
 $card-header-padding: 20px;
-$card-header-font-size: 18px;
+$card-header-font-size: em(18);
 $card-header-font-weight: $semibold;
 $card-body-padding: 20px;
 $card-footer-padding: 4px;
