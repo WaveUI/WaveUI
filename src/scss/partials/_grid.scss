@@ -1,4 +1,4 @@
-/* Container */
+// Container
 .container {
   z-index: 1;
   position: relative;
@@ -16,7 +16,7 @@
   }
 }
 
-/* Row */
+// Row
 .row {
   display: flex;
   flex-direction: row;
@@ -24,7 +24,7 @@
   margin: 0 (-$gutters / 2);
 }
 
-/* Column */
+// Column
 .col {
   padding: 0 ($gutters / 2);
   box-sizing: border-box;

@@ -1,4 +1,4 @@
-/* Heading */
+// Heading
 h1, h2, h3, h4, h5, h6 {
   color: $heading-color;
   font-family: $heading-font;
@@ -15,30 +15,30 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Anchor */
+// Anchor
 a {
   color: $dark-gray;
   text-decoration: none;
 }
 
-/* Bold */
+// Bold
 b,
 strong {
   font-weight: $semibold;
 }
 
-/* Italic */
+// Italic
 i,
 em {
   font-size: italic;
 }
 
-/* Underline */
+// Underline
 u {
   text-decoration: underline;
 }
 
-/* Paragraph */
+// Paragraph
 p {
   color: inherit;
   margin: 0 0 ($gutters / 2);
@@ -53,28 +53,28 @@ p {
   }
 }
 
-/* Font Style */
+// Font Style
 @each $value in $font-style {
   [font-style='#{$value}'] {
     font-style: $value;
   }
 }
 
-/* Text Alignment */
+// Text Alignment
 @each $value in $text-align {
   [text-align='#{$value}'] {
     text-align: $value;
   }
 }
 
-/* Text Transform */
+// Text Transform
 @each $value in $text-transform {
   [text-transform='#{$value}'] {
     text-transform: $value;
   }
 }
 
-/* List */
+// List
 ul {
   list-style: disc;
 }
@@ -131,14 +131,14 @@ ol {
   }
 }
 
-/* Blockquote */
+// Blockquote
 blockquote {
   border-left: 2px solid $accent;
   margin: $gutters 0;
   padding: 0 0 0 $gutters;
 }
 
-/* Clear */
+// Clear
 .clear {
   content: '';
   display: block;
