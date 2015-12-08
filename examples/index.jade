@@ -43,6 +43,7 @@ html
       }
 
       .btn-group .btn,
+      .modal .btn,
       .card .btn {
         margin: 0;
       }
@@ -57,7 +58,9 @@ html
       button(class='btn btn-primary'
              type='button'
              ripple=''
-             ripple-color='#000') Button
+             ripple-color='#000'
+             modal='true'
+             modal-id='modal-1') Modal Trigger
       button(class='btn btn-primary'
              type='button'
              ripple=''
@@ -113,6 +116,20 @@ html
                ripple-color='#fff') Close
 
     .card.card-warning
+      .card-header Card Header
+      .card-body Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      .card-footer(flex=''
+                   justify-content='flex-end')
+        button(class='btn btn-link'
+               type='button'
+               ripple=''
+               ripple-color='#fff') Disagree
+        button(class='btn btn-link'
+               type='button'
+               ripple=''
+               ripple-color='#fff') Agree
+
+    .card
       .card-header Card Header
       .card-body Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
       .card-footer(flex=''
@@ -240,6 +257,21 @@ html
            elevated='true'
            ripple=''
            ripple-color='#000') Button
+
+    .modal#modal-1
+      .modal-header Card Header
+      .modal-body Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      .modal-footer(flex=''
+                   justify-content='flex-end')
+        button(class='btn btn-link'
+               type='button'
+               ripple=''
+               ripple-color='#fff') Disagree
+        button(class='btn btn-link'
+               type='button'
+               ripple=''
+               ripple-color='#fff') Agree
+
     // JavaScript
     // bower:js
     script(src='../bower_components/jquery/dist/jquery.js')

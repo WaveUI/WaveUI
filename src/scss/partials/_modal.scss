@@ -1,14 +1,29 @@
-.card {
+.modal {
+  z-index: 150;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   background: $card-background;
   border-radius: $card-border-radius;
+  max-width: 500px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
   overflow: hidden;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   @each $name, $color in $brand-colors {
     @if $name != "default" {
       &-#{$name} {
 
-        .card-header,
-        .card-footer {
+        .modal-header,
+        .modal-footer {
           background: color($name);
           color: $white;
 
