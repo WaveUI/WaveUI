@@ -42,6 +42,7 @@ html
         margin:  20px;
       }
 
+      .navbar .btn,
       .btn-group .btn,
       .modal .btn,
       .card .btn {
@@ -53,6 +54,86 @@ html
       }
 
   body
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner
+          a.brand(href='') WaveUI
+          nav.nav: ul
+            li: a.active(href='#'
+                         ripple='true'
+                         ripple-color='#000') Home
+            li: a(href='#'
+                  ripple='true'
+                  ripple-color='#000') Getting Started
+            li: a(href='#'
+                  ripple='true'
+                  ripple-color='#000') Blog
+            li: a(href='#'
+                  ripple='true'
+                  ripple-color='#000') Contact
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner
+          a.brand(href='') WaveUI
+          nav.nav: ul
+            li: a.active(href='#') Home
+            li: a(href='#') Getting Started
+            li: a(href='#') Blog
+            li: a(href='#') Contact
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner
+          a.brand(href='') WaveUI
+          nav.nav(flex-grow='2'
+                  justify-content='space-between')
+            ul
+              li: a.active(href='#') Home
+              li: a(href='#') Getting Started
+              li: a(href='#') Blog
+              li: a(href='#') Contact
+            ul
+              li: a.btn.btn-primary.nav-btn(ripple=''
+                                            ripple-color='#fff') Cart
+                span.badge 1
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner(flex-direction='column'
+                      justify-content='center')
+          a.brand(href='') WaveUI
+          nav.nav(flex-grow='2')
+            ul
+              li: a.active(href='#') Home
+              li: a(href='#') Getting Started
+              li: a(href='#') Blog
+              li: a(href='#') Contact
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner(flex-direction='column'
+                      align-items='flex-start')
+          a.brand(href='') WaveUI
+          nav.nav(flex-grow='2')
+            ul
+              li: a.active(href='#') Home
+              li: a(href='#') Getting Started
+              li: a(href='#') Blog
+              li: a(href='#') Contact
+
+    .navbar
+      .container: .row: .col.col-12
+        .navbar-inner(flex-direction='column'
+                      align-items='flex-end')
+          a.brand(href='') WaveUI
+          nav.nav(flex-grow='2')
+            ul
+              li: a.active(href='#') Home
+              li: a(href='#') Getting Started
+              li: a(href='#') Blog
+              li: a(href='#') Contact
 
     .btn-group
       button(class='btn btn-primary'

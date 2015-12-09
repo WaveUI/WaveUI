@@ -1,0 +1,71 @@
+.navbar {
+  background: $white;
+  margin: 0 0 20px;
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .brand {
+    display: block;
+    padding: 14px;
+    font-size: em(18);
+    font-weight: $semibold;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0;
+      font-size: em(14);
+      font-weight: $semibold;
+    }
+
+    a {
+      display: inline-block;
+      padding: 14px;
+      color: $gray;
+      vertical-align: middle;
+
+      &:hover {
+        color: $dark-gray;
+      }
+
+      &.active {
+        background: rgba($black, 0.1);
+        color: $dark-gray;
+      }
+    }
+
+    .btn {
+      padding: 10px 20px;
+      font-size: em(16);
+
+      @each $name, $color in $brand-colors {
+        @if $name != "default" {
+          &-#{$name} {
+            color: $white;
+
+            &:hover,
+            &:focus {
+              background: darken(color($name), 10%);
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

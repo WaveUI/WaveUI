@@ -16,6 +16,11 @@
   touch-action: manipulation;
   transition: 0.3s ease;
 
+  &:hover,
+  &:focus {
+    background: rgba($black, 0.1);
+  }
+
   &[elevated='true'] {
     @include elevation(1);
 
@@ -27,6 +32,11 @@
 
   &-link {
     color: $accent;
+
+    &:hover,
+    &:focus {
+      background: rgba($accent, 0.1);
+    }
   }
 
   @each $name, $color in $brand-colors {
@@ -68,6 +78,10 @@
     & + & {
       margin: ($gutters / 2) 0 0;
     }
+  }
+
+  .badge {
+    margin: 0 0 0 8px;
   }
 
   &-group {

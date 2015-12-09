@@ -70,6 +70,13 @@
   }
 }
 
+// Flex Grow
+@for $i from 1 through $flex-grow {
+  [flex-grow='#{$i}'] {
+    flex-grow: $i;
+  }
+}
+
 // Flex Wrap
 @each $type in $flex-wrap {
   [flex-wrap='#{$type}'] {
