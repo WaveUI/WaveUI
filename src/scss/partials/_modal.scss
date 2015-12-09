@@ -7,13 +7,39 @@
   border-radius: $card-border-radius;
   max-width: 500px;
   width: 100%;
+  transform-origin: center;
   transform: translate(-50%, -50%);
   transition: 0.3s ease;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
 
+  &[modal-animation='fadeInTop'] {
+    transform: translate(-50%, -100%);
+  }
+
+  &[modal-animation='fadeInRight'] {
+    transform: translate(0%, -50%);
+  }
+
+  &[modal-animation='fadeInBottom'] {
+    transform: translate(-50%, 0%);
+  }
+
+  &[modal-animation='fadeInLeft'] {
+    transform: translate(-100%, -50%);
+  }
+
+  &[modal-animation='scaleUp'] {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  &[modal-animation='scaleDown'] {
+    transform: translate(-50%, -50%) scale(2);
+  }
+
   &.active {
+    transform: translate(-50%, -50%) scale(1, 1);
     visibility: visible;
     opacity: 1;
   }
