@@ -117,5 +117,18 @@ $modal-body-padding: 20px;
 $modal-footer-padding: 4px;
 $modal-footer-font-weight: $semibold;
 
+// Navbar Settings
+$navbar-background: $white;
+$navbar-brand-padding: 14px;
+$navbar-brand-color: $dark-gray;
+$navbar-brand-font-size: em(18);
+$navbar-brand-font-weight: $semibold;
+$navbar-nav-font-size: em(14);
+$navbar-nav-font-weight: $semibold;
+$navbar-nav-color: $gray;
+$navbar-nav-hover-color: $dark-gray;
+$navbar-nav-active-background-color: rgba($black, 0.1);
+$navbar-nav-active-color: $dark-gray;
+
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);

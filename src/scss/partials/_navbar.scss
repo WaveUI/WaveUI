@@ -10,16 +10,17 @@
 
   .brand {
     display: block;
-    padding: 14px;
-    font-size: em(18);
-    font-weight: $semibold;
+    padding: $navbar-brand-padding;
+    color: $navbar-brand-color;
+    font-size: $navbar-brand-font-size;
+    font-weight: $navbar-brand-font-weight;
   }
 
   .nav {
     display: flex;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
 
     ul {
       list-style: none;
@@ -29,28 +30,28 @@
     li {
       display: inline-block;
       padding: 0;
-      font-size: em(14);
-      font-weight: $semibold;
+      font-size: $navbar-nav-font-size;
+      font-weight: $navbar-nav-font-weight;
     }
 
     a {
       display: inline-block;
       padding: 14px;
-      color: $gray;
+      color: $navbar-nav-color;
       vertical-align: middle;
 
       &:hover {
-        color: $dark-gray;
+        color: $navbar-nav-hover-color;
       }
 
       &.active {
-        background: rgba($black, 0.1);
-        color: $dark-gray;
+        background: $navbar-nav-active-background-color;
+        color: $navbar-nav-active-color;
       }
     }
 
     .btn {
-      padding: 10px 20px;
+      padding: $btn-padding;
       font-size: em(16);
 
       @each $name, $color in $brand-colors {
