@@ -242,6 +242,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('test', ['jshint:all']);
-  grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev', 'concat:js', 'uglify:js']);
+  grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev', 'concat:js', 'uglify:dist']);
   grunt.registerTask('default', ['connect:server', 'dev', 'notify:server', 'watch']);
 };
