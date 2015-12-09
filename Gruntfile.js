@@ -141,6 +141,14 @@ module.exports = function (grunt) {
       }
     },
 
+    // JSHint
+    jshint: {
+      options: {
+        jshintrc: 'src/js/.jshintrc'
+      },
+      all: ['src/**/*.js']
+    },
+
     // Uglify
     uglify: {
       dist: {
@@ -233,6 +241,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.registerTask('test', ['jshint:all']);
   grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev']);
   grunt.registerTask('default', ['connect:server', 'dev', 'notify:server', 'watch']);
 };
