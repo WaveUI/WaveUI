@@ -29,7 +29,7 @@ $brand-colors: (default: #E2E2E2, primary: $accent, info: #31D0EB, success: #56D
 $base-background: darken($white, 5%);
 $base-color: $gray;
 $base-font-family: $body-font, Helvetica, sans-serif;
-$base-font-size: em(14);
+$base-font-size: initial;
 $base-font-weight: $regular;
 $base-line-height: em(24);
 
