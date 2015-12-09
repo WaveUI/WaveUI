@@ -236,12 +236,12 @@ module.exports = function (grunt) {
 
       js: {
         files: ['**/*.js', '!Gruntfile.js'],
-        tasks: ['concat:js', 'uglify', 'notify:js', 'wakeup:complete']
+        tasks: ['concat:js', 'uglify:dist', 'notify:js', 'wakeup:complete']
       }
     }
   });
 
   grunt.registerTask('test', ['jshint:all']);
-  grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev']);
+  grunt.registerTask('dev', ['jade:dev', 'htmlmin:dev', 'sass:dev', 'concat:js', 'uglify:js']);
   grunt.registerTask('default', ['connect:server', 'dev', 'notify:server', 'watch']);
 };
