@@ -1,6 +1,14 @@
+/**
+ * Overlay Removal
+ * --------------------
+ * Removes overlay when clicked.
+ *
+ * @method overlayRemove
+ */
+
 overlayRemove = function () {
   $('.overlay').on('click', function () {
-    var modalExist = $('.modal.active').length;
+    var modalExist = $('.modal.active').length; // Checks if modal already exists
 
     if (modalExist >= 1) {
       $('.modal').removeClass('active');
@@ -12,11 +20,18 @@ overlayRemove = function () {
   });
 }
 
-overlayAppend = function () {
-  var overlayExist = $('.overlay').length;
+/**
+ * Overlay Append
+ * --------------------
+ * Appends overlay element to body.
+ *
+ * @method overlayAppend
+ */
 
-  if (overlayExist < 1) {
-    // Append Overlay
+overlayAppend = function () {
+  var overlayExist = $('.overlay').length; // Checks if overlay already exists
+
+  if (!overlayExist) {
     $('<div class="overlay"></div>').appendTo('body').hide().fadeIn(300, 'swing');
   }
 

@@ -1,7 +1,20 @@
-$('[modal="true"]').on('click', function () {
-  var modalId = $(this).attr('modal-id');
+/**
+ * Modal Trigger
+ * --------------------
+ * Add click events to element with [modal='true'] attribute.
+ * Locates
+ *
+ * @method modalTrigger
+ */
 
-  $('#' + modalId).addClass('active');
+modalTrigger = function () {
+  $('[modal="true"]').on('click', function () {
+    var modalId = $(this).attr('modal-id');
 
-  overlayAppend();
-});
+    $('#' + modalId).addClass('active');
+
+    overlayAppend();
+  });
+}
+
+modalTrigger();

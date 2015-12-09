@@ -1,19 +1,30 @@
-// Ripple
-$('[ripple]').on('click', function (e) {
-  var rippleDiv = $('<div class="ripple" />'),
-    rippleSize = 60,
-    rippleOffset = $(this).offset(),
-    rippleY = e.pageY - rippleOffset.top,
-    rippleX = e.pageX - rippleOffset.left,
-    ripple = $('.ripple');
+/**
+ * Ripple Effect
+ * --------------------
+ * Applies ripple effect to an element with [ripple] attributes.
+ *
+ * @method ripple
+ */
 
-  rippleDiv.css({
-    top: rippleY - (rippleSize / 2),
-    left: rippleX - (rippleSize / 2),
-    background: $(this).attr("ripple-color")
-  }).appendTo($(this));
+ripple = function () {
+  $('[ripple]').on('click', function (e) {
+    var rippleDiv = $('<div class="ripple" />'),
+      rippleSize = 60,
+      rippleOffset = $(this).offset(),
+      rippleY = e.pageY - rippleOffset.top,
+      rippleX = e.pageX - rippleOffset.left,
+      ripple = $('.ripple');
 
-  window.setTimeout(function () {
-    rippleDiv.remove();
-  }, 1900);
-});
+    rippleDiv.css({
+      top: rippleY - (rippleSize / 2),
+      left: rippleX - (rippleSize / 2),
+      background: $(this).attr("ripple-color")
+    }).appendTo($(this));
+
+    window.setTimeout(function () {
+      rippleDiv.remove();
+    }, 1900);
+  });
+}
+
+ripple();
