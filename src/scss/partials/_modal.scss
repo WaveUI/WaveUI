@@ -3,8 +3,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  background: $card-background;
-  border-radius: $card-border-radius;
+  background: $modal-background;
+  border-radius: $modal-border-radius;
   max-width: 500px;
   width: 100%;
   transform-origin: center;
@@ -74,17 +74,17 @@
   }
 
   &-header {
-    padding: $card-header-padding;
-    font-size: $card-header-font-size;
-    font-weight: $card-header-font-weight;
+    padding: $modal-header-padding;
+    font-size: $modal-header-font-size;
+    font-weight: $modal-header-font-weight;
   }
 
   &-body {
-    padding: $card-body-padding;
+    padding: $modal-body-padding;
   }
 
   &-footer {
-    padding: $card-footer-padding;
-    font-weight: $card-footer-font-weight;
+    padding: $modal-footer-padding;
+    font-weight: $modal-footer-font-weight;
   }
 }

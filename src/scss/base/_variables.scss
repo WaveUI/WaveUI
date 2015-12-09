@@ -106,5 +106,15 @@ $card-body-padding: 20px;
 $card-footer-padding: 4px;
 $card-footer-font-weight: $semibold;
 
+// Modal Settings
+$modal-background: $white;
+$modal-border-radius: $components-border-radius;
+$modal-header-padding: 20px;
+$modal-header-font-size: em(18);
+$modal-header-font-weight: $semibold;
+$modal-body-padding: 20px;
+$modal-footer-padding: 4px;
+$modal-footer-font-weight: $semibold;
+
 // Media Queries
 $media-query: (desktop: 1024px, tablet: 768px, phone: 480px);
