@@ -127,7 +127,9 @@ $navbar-nav-font-size: em(14);
 $navbar-nav-font-weight: $semibold;
 $navbar-nav-color: $gray;
 $navbar-nav-hover-color: $dark-gray;
-$navbar-nav-active-background-color: rgba($black, 0.1);
+$navbar-nav-active-border-height: 2px;
+$navbar-nav-active-border-radius: $components-border-radius;
+$navbar-nav-active-border-color: $dark-gray;
 $navbar-nav-active-color: $dark-gray;
 
 // Media Queries

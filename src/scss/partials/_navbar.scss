@@ -46,8 +46,20 @@
       }
 
       &.active {
-        background: $navbar-nav-active-background-color;
+        position: relative;
         color: $navbar-nav-active-color;
+
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          background: $navbar-nav-active-border-color;
+          width: 100%;
+          height: $navbar-nav-active-border-height;
+          border-radius: $navbar-nav-active-border-radius;
+        }
       }
     }
 
